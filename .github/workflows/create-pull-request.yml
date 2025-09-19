@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      pull-requests' write
+      pull-requests: write
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -29,5 +29,5 @@ jobs:
       - run: |
           git branch
           gh pr create --title "Copilot code reviewの実行テスト" --body "Copilot code reviewの自動実行を設定している場合の挙動を確認する"
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        env:
+          GH_TOKEN: ${{ github.token }}
