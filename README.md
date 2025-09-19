@@ -1,1 +1,1 @@
-# github-copilot-playground
+# GitHub Copilot playground
